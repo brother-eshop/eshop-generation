@@ -19,8 +19,8 @@ public class ${voClassName}ServiceImpl implements ${voClassName}Service{
 
  	@Autowired
     private ${voClassName}Dao ${parmString}Dao;
-    @Autowired
-	private QueryProvider queryCache;
+    //@Autowired
+	//private QueryProvider queryCache;
     /**
      * 添加${voClassName}
      * @param ${parmString} 要添加的${voClassName}
@@ -100,7 +100,7 @@ public class ${voClassName}ServiceImpl implements ${voClassName}Service{
     	return ${parmString}Dao.get${voClassName}CountByObj(${parmString});
     }
     
-
+/**
     public ${voClassName} get${voClassName}ById(<#assign i=0><#list columnList as column><#if column.key><#assign i=i+1><#if (i>1)>,</#if>${column.propertyType} ${column.propertyName}</#if></#list>){
     	${voClassName} ${parmString} =(${voClassName})queryCache.queryObj("SNS_${voClassName}", String.valueOf(<#assign i=0><#list columnList as column><#if column.key><#assign i=i+1><#if (i>1)>,</#if> ${column.propertyName}</#if></#list>));
     	if(${parmString}==null){
@@ -160,7 +160,7 @@ public class ${voClassName}ServiceImpl implements ${voClassName}Service{
     	}
     	return list;
     }
- /**
+ */
     public ${voClassName} get${voClassName}ById(<#assign i=0><#list columnList as column><#if column.key><#assign i=i+1><#if (i>1)>,</#if>${column.propertyType} ${column.propertyName}</#if></#list>){
     	return ${parmString}Dao.get${voClassName}ById(<#assign i=0><#list columnList as column><#if column.key><#assign i=i+1><#if (i>1)>,</#if> ${column.propertyName}</#if></#list>);
     }
@@ -182,5 +182,5 @@ public class ${voClassName}ServiceImpl implements ${voClassName}Service{
     
     public List<${voClassName}> get${voClassName}Page(${voClassName} ${parmString},PageEntity page) {
         return ${parmString}Dao.get${voClassName}Page(${parmString},page);
-    }*/
+    }
 }
