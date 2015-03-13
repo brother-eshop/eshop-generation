@@ -29,9 +29,9 @@
     <bean id="tableNSMap" class="java.util.HashMap">
         <constructor-arg>
             <map>
-                <entry key="ad">
+                <entry key="manager">
                       <list>
-						<value>sns_space_ad</value>
+						<value>e_user</value>
                       </list>
                 </entry>
             </map>
